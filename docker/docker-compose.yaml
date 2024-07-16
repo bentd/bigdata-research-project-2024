@@ -1,0 +1,154 @@
+services:
+  namenode:
+    image: apache/hadoop:3
+    hostname: namenode
+    container_name: namenode
+    command: ["hdfs", "namenode"]
+    ports:
+      - 9870:9870
+      - 8020:8020
+    env_file:
+      - ./config
+    environment:
+      ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
+    networks:
+      - research
+
+  datanode-1:
+    image: apache/hadoop:3
+    container_name: datanode-1
+    command: ["hdfs", "datanode"]
+    env_file:
+      - ./config
+    networks:
+      - research
+
+  datanode-2:
+    image: apache/hadoop:3
+    container_name: datanode-2
+    command: ["hdfs", "datanode"]
+    env_file:
+      - ./config
+    networks:
+      - research
+
+  datanode-3:
+    image: apache/hadoop:3
+    container_name: datanode-3
+    command: ["hdfs", "datanode"]
+    env_file:
+      - ./config
+    networks:
+      - research
+
+  resourcemanager:
+    image: apache/hadoop:3
+    hostname: resourcemanager
+    container_name: resourcemanager
+    command: ["yarn", "resourcemanager"]
+    ports:
+      - 8088:8088
+    env_file:
+      - ./config
+    volumes:
+      - ./test.sh:/opt/test.sh
+    networks:
+      - research
+
+  nodemanager:
+    image: apache/hadoop:3
+    command: ["yarn", "nodemanager"]
+    env_file:
+      - ./config
+    networks:
+      - research
+
+  spark-master:
+    image: docker.io/bitnami/spark:3.5
+    hostname: spark-master
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_LOCAL_IP=spark-master
+      - SPARK_USER=spark
+    ports:
+      - "8080:8080"
+      - "8888:8888"
+      - "7077:7077"
+      - "15002:15002"
+    networks:
+      - research
+
+  spark-worker-1:
+    image: docker.io/bitnami/spark:3.5
+    container_name: spark-worker-1
+    ports:
+      - "8081:8081"
+      - "51041"
+      - "45341"
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_PORT=45341
+      - SPARK_WORKER_WEBUI_PORT=8081
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_USER=spark
+    networks:
+      - research
+
+  spark-worker-2:
+    image: docker.io/bitnami/spark:3.5
+    container_name: spark-worker-2
+    ports:
+      - "8082:8082"
+      - "51041"
+      - "45342"
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_PORT=45342
+      - SPARK_WORKER_WEBUI_PORT=8082
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_USER=spark
+    networks:
+      - research
+
+  spark-worker-3:
+    image: docker.io/bitnami/spark:3.5
+    container_name: spark-worker-3
+    ports:
+      - "8083:8083"
+      - "51041"
+      - "45343"
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+      - SPARK_WORKER_MEMORY=1G
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_PORT=45343
+      - SPARK_WORKER_WEBUI_PORT=8083
+      - SPARK_RPC_AUTHENTICATION_ENABLED=no
+      - SPARK_RPC_ENCRYPTION_ENABLED=no
+      - SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED=no
+      - SPARK_SSL_ENABLED=no
+      - SPARK_USER=spark
+    networks:
+      - research
+
+networks:
+  research:
+    driver: bridge
