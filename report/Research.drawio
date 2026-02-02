@@ -1,0 +1,103 @@
+<mxfile host="app.diagrams.net" modified="2024-07-17T02:57:30.985Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="Ry97e3uboQ6EQ-vkURJX" version="24.7.0" type="device">
+  <diagram name="Page-1" id="XXr1eHS0YotRPbvXq6TX">
+    <mxGraphModel dx="1984" dy="1757" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-20" value="" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;fillColor=none;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="170" y="-40" width="597.6" height="980" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-3" value="Spark Worker" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="410" y="470" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-4" value="Spark Master" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="270" y="580" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-5" value="Spark Worker" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="410" y="580" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-6" value="Spark Worker&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="410" y="690" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-7" value="Hadoop Namenode" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="260" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-8" value="Hadoop Datanode" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="410" y="130" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-9" value="Hadoop Datanode" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="410" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-10" value="Hadoop Datanode" style="image;html=1;image=img/lib/clip_art/computers/Server_128x128.png" vertex="1" parent="1">
+          <mxGeometry x="410" y="240" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-15" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-4" target="wq1iKZBYpxBIvuAH_ToK-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="540" as="sourcePoint" />
+            <mxPoint x="150" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="91" y="620" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-16" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.485;exitY=-0.139;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-2" target="wq1iKZBYpxBIvuAH_ToK-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="500" as="sourcePoint" />
+            <mxPoint x="420" y="450" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="90" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-18" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="500" as="sourcePoint" />
+            <mxPoint x="310" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-21" value="Docker Network" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=23;" vertex="1" parent="1">
+          <mxGeometry x="590" y="451.2" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-24" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-5" target="wq1iKZBYpxBIvuAH_ToK-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="660" as="sourcePoint" />
+            <mxPoint x="420" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-25" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-6" target="wq1iKZBYpxBIvuAH_ToK-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="660" as="sourcePoint" />
+            <mxPoint x="420" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-26" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-4" target="wq1iKZBYpxBIvuAH_ToK-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="660" as="sourcePoint" />
+            <mxPoint x="420" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-27" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-7" target="wq1iKZBYpxBIvuAH_ToK-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="550" as="sourcePoint" />
+            <mxPoint x="420" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-7" target="wq1iKZBYpxBIvuAH_ToK-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="550" as="sourcePoint" />
+            <mxPoint x="420" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-29" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.968;exitY=0.127;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="wq1iKZBYpxBIvuAH_ToK-7" target="wq1iKZBYpxBIvuAH_ToK-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="500" as="sourcePoint" />
+            <mxPoint x="420" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wq1iKZBYpxBIvuAH_ToK-2" value="Jupyter Notebook and PySpark Client" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="60" y="418.8" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
